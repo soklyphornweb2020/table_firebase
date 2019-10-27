@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>teacher_demo1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-4">
+                <div class="card shadow-lg">
+                    <div class="card-header"> Add New teacher</div>
+                    <div class="card-body">
+                        <form action="#">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" id="name" placeholder="Teacher name">
+                            </div>
+                            <div class="form-group">
+                                <label>Age</label>
+                                <input type="number" class="form-control" id="age" placeholder="Teacher age">
+                            </div>
+                            <button class="btn btn-info btn-block" type="button"> Add New Teacher</button> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="card shodow-lg">
+                    <div class="card-header">Teacher info</div>
+                    <div class="card-body">
+                        <table class="table table-bordered">
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Action</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDVUNdRB2_4vFzm1NKTatmNJb75cGmgcFo",
+    authDomain: "teacher-4b61f.firebaseapp.com",
+    databaseURL: "https://teacher-4b61f.firebaseio.com",
+    projectId: "teacher-4b61f",
+    storageBucket: "teacher-4b61f.appspot.com",
+    messagingSenderId: "1002532357525",
+    appId: "1:1002532357525:web:bebe51d5b5d31d2e5f629c",
+    measurementId: "G-QW5TLP9TB0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  var database = firebase.firestore();
+</script>
+    <script src="js/teacher.js"></script>
+</body>
+</html>
